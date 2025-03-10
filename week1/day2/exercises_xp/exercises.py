@@ -45,7 +45,7 @@ if my_name == user_name:
 else:
     print(f"Nice to meet you, {user_name}. I'm {my_name}")
 
-#Exercise 9
+# Exercise 9
 user_height = int(input("Enter your height: "))
 if user_height > 145:
     print("You're high enough to ride a roller coaster")
