@@ -7,6 +7,9 @@ if len(user_sentence) < 10:
 elif len(user_sentence) > 10:
     print("String is too long")
 else:
+    print("Perfect string")
+
+    print()
     print(user_sentence[0])
     print(user_sentence[-1])
 
