@@ -28,4 +28,4 @@ for item, cost in items_purchase.items():
         available.append(item)
         wallet -= cost
 
-print(available if available else 'Nothing')
+print(sorted(available) if available else 'Nothing')
