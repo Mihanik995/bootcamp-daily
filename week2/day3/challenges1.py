@@ -124,4 +124,31 @@ def dict_avg(dictionary: dict) -> int:
         sum += value
     return sum / len(dictionary)
 
+
 # ...
+# Exercise 18
+def type_count(*args):
+    result = dict()
+    for arg in args:
+        if type(arg) in result.keys():
+            result[arg] += 1
+        else:
+            result[arg] = 1
+    return result
+
+
+# Exercise 19
+def split(string_: str, symbol=' ') -> list:
+    result = []
+    while symbol in string_:
+        for i in range(len(string_)):
+            if string_[i] == symbol:
+                result.append(string_[:i])
+                string_ = string_[i + 1:]
+                break
+    if string_:
+        result.append(string_)
+    return result
+
+print(split(string))
+print(split(string, symbol='.'))
