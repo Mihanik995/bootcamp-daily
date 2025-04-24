@@ -14,7 +14,7 @@ def execute_query(query):
             try:
                 return cursor.fetchall()
             except Exception as e:
-                print(e)
+                pass
 
 class MenuItem:
     def __init__(self, name: str, price: int):
