@@ -23,16 +23,19 @@ class MenuItem:
 
         self.id = self.save()
 
+    def __str__(self):
+        return f"{self.name} - {self.price}"
+
 
     def save(self):
         if not execute_query(f"select * from menu_items where item_name = '{self.name}'"):
             execute_query(f"INSERT INTO menu_items (item_name, item_price) VALUES ('{self.name}', {self.price})")
         return execute_query(f"select item_id from menu_items where item_name = '{self.name}'")[0][0]
 
-    def update(self):
+    def update(self, name: str, price: int):
         if not execute_query(f"select * from menu_items where item_id = {self.id}"):
             self.save()
-        execute_query(f"update menu_items set item_name = '{self.name}', item_price = {self.price} where item_id = '{self.id}'")
+        execute_query(f"update menu_items set item_name = '{name}', item_price = {price} where item_id = '{self.id}'")
 
     def delete(self):
         if execute_query(f"select * from menu_items where item_id = {self.id}"):
@@ -45,7 +48,8 @@ class MenuManager:
         if result:
             return MenuItem(result[0][1], result[0][2])
 
-    def all_items(self):
+    @staticmethod
+    def all_items():
         response = execute_query(f"select * from menu_items")
         if response:
             result = []
