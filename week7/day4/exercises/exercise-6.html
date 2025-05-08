@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="navBar">
+    <ul>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">My Friends</a></li>
+        <li><a href="#">Messenger</a></li>
+        <li><a href="#">My Pics</a></li>
+    </ul>
+</div>
+
+<script>
+    let navBar = document.getElementById('navBar')
+    navBar.setAttribute('id', 'socialNetworkNavigation')
+
+    let newLi = document.createElement('li')
+    newLi.innerHTML = '<a href="#">Logout</a>'
+    let ul = document.getElementsByTagName('ul')[0]
+    ul.appendChild(newLi)
+
+    console.log(ul.firstElementChild.textContent)
+    console.log(ul.lastElementChild.textContent)
+</script>
+</body>
+</html>

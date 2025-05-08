@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<section class="listBooks"></section>
+
+<script>
+    let allBooks = [
+        {
+            title: "The Great Gatsby",
+            author: 'F. Scott Fitzgerald',
+            image: 'https://images.thegreatestbooks.org/ymseqoyhkyhpho50rs2jdjmi2gnn',
+            alreadyRead: false
+        },
+        {
+            title: 'Nineteen Eighty Four',
+            author: 'George Orwell',
+            image: 'https://images.thegreatestbooks.org/g6ad61qycr85wv0xd9zvwedc0v7i',
+            alreadyRead: true
+        }
+    ]
+
+    for (let book of allBooks) {
+        let newDiv = document.createElement('div')
+
+        let bookImg = document.createElement('img')
+        bookImg.src = book.image
+        bookImg.alt = book.title
+        bookImg.style.width = '100px'
+        bookImg.style.float = 'left'
+        bookImg.style.margin = '7px'
+        newDiv.appendChild(bookImg)
+
+        let newP = document.createElement('p')
+        newP.innerText = `${book.title} written by ${book.author}`
+        if (book.alreadyRead) {
+            newP.style.color = 'red'
+        }
+        newDiv.appendChild(newP)
+
+        newDiv.style.clear = 'both'
+        document.getElementsByClassName('listBooks')[0].appendChild(newDiv)
+    }
+</script>
+</body>
+</html>

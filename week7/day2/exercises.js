@@ -63,7 +63,7 @@ const family = {
     mom: 'Eva',
     uncle: 'Oliver'
 }
-for (let value of Object.values(family)){
+for (let value of Object.values(family)) {
     console.log(value)
 }
 for (const key of Object.keys(family)) {
@@ -72,12 +72,12 @@ for (const key of Object.keys(family)) {
 
 // Exercise 6
 const details = {
-  my: 'name',
-  is: 'Rudolf',
-  the: 'reindeer'
+    my: 'name',
+    is: 'Rudolf',
+    the: 'reindeer'
 }
 let result
-for (let [key, value] of Object.entries(details)){
+for (let [key, value] of Object.entries(details)) {
     result += key + ' ' + value + ' '
 }
 console.log(result)

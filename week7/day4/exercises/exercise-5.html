@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="container">Users:</div>
+<ul class="list">
+    <li>John</li>
+    <li>Pete</li>
+</ul>
+<ul class="list">
+    <li>David</li>
+    <li>Sarah</li>
+    <li>Dan</li>
+</ul>
+
+<script>
+    let div = document.getElementById('container')
+    console.log(div)
+    let pete = document.getElementsByTagName('li')[1]
+    pete.innerText = 'Richard'
+    let second = document.getElementsByTagName('ul')[1]
+    second.removeChild(second.children[1])
+    let uls = document.getElementsByTagName('ul')
+    for (let ul of uls) {
+        ul.children[0].innerText = 'Mikhail'
+    }
+
+    for (let ul of uls) {
+        ul.className = 'student_list'
+    }
+    uls[0].classList.add('university', 'attendance')
+
+    div.style.background = 'lightblue'
+    div.style.padding = '20px'
+    for (let ul of uls) {
+        for (let li of ul.children) {
+            if (li.innerText === 'Dan') {
+                li.style.display = 'none';
+            }
+            if (li.innerText === 'Richard') {
+                li.style.border = '1px solid black'
+            }
+        }
+    }
+    document.getElementsByTagName('body')[0].style.color = 'red'
+
+    if (div.style.background === 'lightblue') {
+        alert(`Hello ${uls[0].children[0].innerText} and ${uls[0].children[1].innerText}`)
+    }
+</script>
+</body>
+</html>
