@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Challenge: Mad Libs</title>
+</head>
+<body>
+<h1>Mad Libs</h1>
+<form id="libform">
+    <label for="noun">Noun:</label><input type="text" id="noun" required><br>
+    <label for="adjective">Adjective:</label><input type="text" id="adjective" required><br>
+    <label for="person">Someone's Name:</label><input type="text" id="person" required><br>
+    <label for="verb">Verb:</label><input type="text" id="verb" required><br>
+    <label for="place">A place:</label><input type="text" id="place" required> <br>
+    <button id="lib-button">Lib it!</button>
+</form>
+
+<p>Generated story:
+    <span id="story"></span>
+</p>
+
+<script>
+    document.forms.libform.addEventListener('submit', (event) => {
+        event.preventDefault()
+        const story = document.getElementById('story')
+        const adjective = document.getElementById('adjective').value
+        const noun = document.getElementById('noun').value
+        const person = document.getElementById('person').value
+        const verb = document.getElementById('verb').value
+        const place = document.getElementById('place').value
+        story.innerText = `${person} ${verb}s the ${adjective} ${noun} in the ${place}`
+    })
+</script>
+
+</body>
+</html>
