@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 2</title>
+</head>
+<body>
+<form>
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="firstname" required><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lastname" required><br><br>
+    <button type="submit">Submit</button>
+</form>
+<ul class="usersAnswer"></ul>
+
+<script>
+    console.log(document.forms[0])
+
+    const firstName = document.getElementById('fname')
+    const lastName = document.getElementById('lname')
+    console.log(firstName)
+    console.log(lastName)
+
+    console.log(document.getElementsByName('firstname')[0])
+    console.log(document.getElementsByName('lastname')[0])
+
+    const form = document.forms[0]
+    form.addEventListener('submit', (event) => {
+        event.preventDefault()
+        for (let child of form.children) {
+            if (child.value) {
+                const newLi = document.createElement('li')
+                newLi.innerText = child.value
+                document.getElementsByTagName('ul')[0].appendChild(newLi)
+            }
+        }
+    })
+</script>
+</body>
+</html>

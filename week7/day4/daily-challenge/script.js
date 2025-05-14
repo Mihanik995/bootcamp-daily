@@ -10,7 +10,7 @@ let planets = {
 }
 for (let [planet, color] of Object.entries(planets)){
     let newDiv = document.createElement('div')
-    newDiv.innerText = planet
+    newDiv.id = planet
     newDiv.style.background = color
     newDiv.className = 'planet'
     document.getElementsByTagName('section')[0].appendChild(newDiv)

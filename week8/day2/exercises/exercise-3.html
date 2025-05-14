@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 3</title>
+</head>
+<body>
+<p><strong>Hello</strong> I hope you are enjoying <strong>this</strong> class. At the
+    <strong>end</strong> you <strong>will</strong> be great Developers!
+    <strong>Enjoy</strong> the <strong>JavaScript </strong> lessons</p>
+
+<script>
+    let allBoldItems
+    const p = document.getElementsByTagName('p')[0]
+
+    const getBoldItems = () => {
+        allBoldItems = [...p.children].filter(n => n.tagName === 'STRONG')
+    }
+
+    const highlight = () => {
+        getBoldItems()
+        for (const elem of allBoldItems){
+            elem.style.color = 'blue'
+        }
+    }
+
+    const returnItemsToDefault = () => {
+        getBoldItems()
+        for (const elem of allBoldItems){
+            elem.style.color = 'black'
+        }
+    }
+
+    p.addEventListener('mouseover', highlight)
+    p.addEventListener('mouseout', returnItemsToDefault)
+</script>
+</body>
+</html>
