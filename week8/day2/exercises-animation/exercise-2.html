@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 2</title>
+    <style>
+        #container {
+            width: 400px;
+            height: 400px;
+            position: relative;
+            background: yellow;
+        }
+
+        #animate {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<p>
+    <button onclick="myMove()">Click Me</button>
+</p>
+<div id="container">
+    <div id="animate"></div>
+</div>
+
+<script>
+    const box = document.getElementById('animate')
+    box.style.left = '0'
+    const container = document.getElementById('container')
+
+    let interval
+    const myMove = () => {
+        interval = setInterval(() => {
+            box.style.left = `${parseInt(box.style.left) + 1}px`
+            if (parseInt(box.style.left) >= container.offsetWidth - box.offsetWidth) {
+                clearInterval(interval)
+            }
+        }, 1)
+    }
+</script>
+</body>
+</html>

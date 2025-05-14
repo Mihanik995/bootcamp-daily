@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        p {
+            background: yellow;
+            color: red;
+        }
+    </style>
+    <title>Exercise 1</title>
+</head>
+<body>
+<div id="container"></div>
+<button id="clear">Clear Interval</button>
+
+<script>
+    setTimeout(() => alert('Hello World'), 2000)
+
+    const div = document.getElementById('container')
+    setTimeout(() => {
+        const newP = document.createElement('p')
+        newP.innerText = 'Hello World'
+        div.appendChild(newP)
+    }, 2000)
+
+    let interval = setInterval(() => {
+        const newP = document.createElement('p')
+        newP.innerText = 'Hello World'
+        div.appendChild(newP)
+        if (div.children.length >= 5){
+            clearInterval(interval)
+        }
+    }, 2000)
+    document.getElementById('clear').addEventListener('click', () => {
+        clearInterval(interval)
+    })
+</script>
+</body>
+</html>
