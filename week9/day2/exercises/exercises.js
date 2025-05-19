@@ -48,7 +48,7 @@ const makeJuice = (size) => {
 
     const displayJuice = () => {
         const newP = document.createElement('p')
-        newP.innerText = `The client wants a ${size} juice, containing ${ingredients.join(', ')}`
+        newP.innerText = `The client wants a ${size} juice, containing ${ingredients.join(', ')}.`
         document.getElementsByTagName('body')[0].appendChild(newP)
     }
 
