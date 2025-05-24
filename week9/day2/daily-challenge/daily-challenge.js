@@ -18,3 +18,7 @@ const cloneGroceries = () => {
 }
 
 cloneGroceries()
+
+class User {
+
+}
