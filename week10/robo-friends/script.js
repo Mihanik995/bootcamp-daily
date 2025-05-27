@@ -75,7 +75,7 @@ const main = document.getElementsByTagName('main')[0]
 const input = document.getElementsByTagName('input')[0]
 
 const fillMain  =function () {
-    robots.filter(elem => elem.name.includes(input.value))
+    robots.filter(elem => elem.name.toLowerCase().includes(input.value))
         .forEach(elem => {
             const newRobot = document.createElement('div')
             newRobot.className = 'robot'
