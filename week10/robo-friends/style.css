@@ -36,8 +36,10 @@ input {
 
 main {
     padding-top: 10vh;
-    display: grid;
-    grid-template-columns: repeat(3, 20vw);
+    width: 70vw;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .robot {
