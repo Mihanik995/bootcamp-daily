@@ -1,0 +1,75 @@
+body {
+    height: 100vh;
+    background-image: url("https://github.com/devtlv/studentsGitHub/blob/master/JS/Week%204/Day5/Mini%20Projects/Mini%20Project%201%20(Robots)/circuit-pattern.png?raw=true");
+    background-color: #833AB4;
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    padding: 10px;
+    background-color: mediumaquamarine;
+    display: flex;
+    align-items: center;
+}
+
+a {
+    margin: 0 20px;
+    font-size: 5vh;
+    text-decoration: none;
+    font-family: "Bungee Shade", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: black;
+}
+
+input {
+    margin: 0 20px;
+    padding: 8px;
+    width: 70vw;
+    border-radius: 10px;
+}
+
+main {
+    padding-top: 10vh;
+    display: grid;
+    grid-template-columns: repeat(3, 20vw);
+}
+
+.robot {
+    background-color: skyblue;
+    margin: 10px;
+    padding: 0 20px;
+    height: 55vh;
+    background-image: url("https://github.com/devtlv/studentsGitHub/blob/master/JS/Week%204/Day5/Mini%20Projects/Mini%20Project%201%20(Robots)/card-pattern.png?raw=true");
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.robot img {
+    width: 15vw;
+    height: auto;
+    background-color: darkblue;
+    border-radius: 50%;
+}
+
+.innerBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 17vw;
+    padding: 0 15px;
+    margin-top: 10px;
+    background-color: #a4d7ec;
+    border: 5px solid #327c9a;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
