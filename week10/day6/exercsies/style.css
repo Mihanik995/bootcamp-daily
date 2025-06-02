@@ -1,0 +1,13 @@
+div {
+    margin: 20px;
+    width: 30vw;
+}
+
+form {
+    display: flex;
+    flex-direction: column
+}
+
+input, textarea {
+    margin-bottom: 10px;
+}
