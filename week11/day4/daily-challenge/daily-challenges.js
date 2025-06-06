@@ -93,7 +93,7 @@ const toJS = function () {
 
 const toMorse = function (morseJS) {
     return new Promise((resolve, reject) => {
-        const arr = prompt('Give me a sentence: ').split('')
+        const arr = prompt('Give me a sentence: ').toLowerCase().split('')
         const anomaly = arr.find(elem => !Object.keys(morseJS).includes(elem))
         return anomaly
             ? reject(`"${anomaly}" doesn't exist in the morse javascript object`)
@@ -101,6 +101,10 @@ const toMorse = function (morseJS) {
     })
 }
 
+const joinWords = function(morseTranslation) {
+    document.getElementsByTagName('h1')[0].innerText = morseTranslation.join('\n')
+}
+
 toJS().then(result => toMorse(result))
-    .then(result => console.log(result))
+    .then(result => joinWords(result))
     .catch(error => console.warn(error))
