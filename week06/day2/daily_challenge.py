@@ -2,7 +2,7 @@ import random
 
 import requests
 
-from week6.day2.menu_item import execute_query
+from week06.day2.menu_item import execute_query
 
 response = requests.get('https://restcountries.com/v3.1/all')
 items = response.json()

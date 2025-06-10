@@ -79,7 +79,7 @@ for dog in dogs:
 
 
 # Exercise 3
-# let's just pretend this is a new file, and I did "from week3.day2.exercises import Dog"
+# let's just pretend this is a new file, and I did "from week03.day2.exercises import Dog"
 class PetDog(Dog):
     def __init__(self, name, age, weight, trained=False):
         super().__init__(name, age, weight)

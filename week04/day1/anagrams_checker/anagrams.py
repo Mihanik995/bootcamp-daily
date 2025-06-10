@@ -1,4 +1,4 @@
-from week4.day1.anagrams_checker.anagram_checker import AnagramChecker
+from week04.day1.anagrams_checker.anagram_checker import AnagramChecker
 
 print("Hello there!\n"
       "Welcome to Anagram Checker!")

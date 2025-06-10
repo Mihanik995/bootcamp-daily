@@ -59,7 +59,7 @@ except TypeError as e:
 
 
 # Exercise 2
-from week3.day4.func import summ
+from week03.day4.func import summ
 
 summ(3, 5)
 

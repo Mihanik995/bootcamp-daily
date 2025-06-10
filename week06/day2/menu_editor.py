@@ -1,4 +1,4 @@
-from week6.day2.menu_item import MenuManager, MenuItem
+from week06.day2.menu_item import MenuManager, MenuItem
 
 
 def add_item_to_menu():
