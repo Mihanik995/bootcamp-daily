@@ -43,3 +43,4 @@ const fetchGif = async function (event) {
     }
 }
 
+const deleteAll = () => document.getElementById('gifs').innerText = ''
