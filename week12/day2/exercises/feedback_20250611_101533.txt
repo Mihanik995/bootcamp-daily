@@ -1,0 +1,16 @@
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week12/day2/exercises/exercises.js
+suggestions for improvement:
+- In Exercise 1, explicitly check the response status code (e.g., response.ok) before accessing the JSON data to handle potential errors more robustly.  The current solution catches errors but doesn't specifically handle non-2xx status codes.
+- Exercise 2's approach to building the URL is functional but could be slightly improved for readability by using a URLSearchParams object instead of string manipulation.  This improves maintainability and reduces the risk of errors in URL construction.
+- While Exercise 3 correctly uses async/await and error handling,  adding a more informative message in the catch block would improve debugging and user experience (e.g., `console.warn('Error fetching data:', e)`).
+Correctness: 95%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week12/day2/exercises/index.html
+suggestions for improvement:
+- Exercise 1: Add error handling to explicitly check for HTTP errors (status codes 4xx or 5xx) and provide informative messages to the user.
+- Exercise 1 & 2:  The code should ideally display the GIF data more effectively than just logging it to the console.  Consider displaying the GIFs on the webpage.
+- Exercise 2: The instructions mention retrieving 10 GIFs with an offset of 2. Ensure the code correctly uses the `limit` and `offset` parameters.
+- Exercise 3: While the async function works, it lacks error handling.  Add a `try...catch` block to handle potential network errors or issues with the API response.
+- Exercise 4: The exercise asks for an analysis of the outcome. The code should include a comment explaining that the output will be 'calling' followed by a 2-second delay, then 'resolved'.
+Correctness: 85%
+-----
