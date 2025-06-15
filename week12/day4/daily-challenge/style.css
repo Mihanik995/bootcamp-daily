@@ -1,0 +1,32 @@
+* {
+    margin: 5px;
+}
+
+body {
+    background-image: url("https://hello.mindandmetrics.com/hubfs/Blog-Post-Headers-2019/how-much-to-spend-marketing.jpg");
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+div {
+    background-color: rgba(0, 0, 255, 0.3);
+    padding: 3vw;
+    border-radius: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+#result {
+    height: 8vh;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
