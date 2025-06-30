@@ -1,0 +1,26 @@
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week12/day4/star-wars-app/index.html
+suggestions for improvement:
+- Add error handling for network issues or API failures beyond simply displaying an error message.  Consider more informative error messages to the user (e.g., 'Could not reach the Star Wars API. Please check your internet connection.').
+- Implement loading animation as specified in the instructions using Font Awesome.  The current implementation lacks visual feedback during API calls.
+- Improve CSS styling to better match the provided example image.  The current HTML structure is good, but the visual presentation needs enhancement.
+- Add input validation to handle unexpected or invalid API responses.  For instance, some fields might be missing or contain unexpected data types. Implement checks for null or undefined values before displaying them.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week12/day4/star-wars-app/script.js
+suggestions for improvement:
+- Improve error handling: The error handling is basic.  Consider providing more specific error messages to the user, indicating the type of error encountered (e.g., network error, API error, etc.).
+- Add loading indicator: While it starts with a loading message, it doesn't have a visual loading indicator (like a spinner) which is a better user experience than just text.
+- Refactor `createTemplate` function: This function is slightly repetitive and could be simplified.  Consider directly accessing the properties instead of using an intermediary `stamp` variable and looping over an array of one element.
+- Use async/await consistently: The code mixes `.then()` and `async/await`. For better readability and maintainability, use `async/await` consistently throughout the `findSomeone` function.
+- Homeworld Handling: While the code gets the homeworld, it doesn't handle cases where the homeworld API call fails.  Add error handling for this nested API call.
+Correctness: 90%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week12/day4/star-wars-app/style.css
+suggestions for improvement:
+- The provided code only contains CSS styling.  It lacks the JavaScript functionality required to fetch data from the Star Wars API using async/await and the Fetch API, display it on the page, handle loading states, and manage errors as specified in the chapter content.
+- Add JavaScript code to fetch data from `https://www.swapi.tech/api/people/` (or a random character endpoint).
+- Implement functions to handle data retrieval, DOM manipulation, loading indicators, and error handling.
+- Use async/await for cleaner asynchronous code.
+- Include the Font Awesome CSS link to use the loading animation icons.
+Correctness: 0%
+-----

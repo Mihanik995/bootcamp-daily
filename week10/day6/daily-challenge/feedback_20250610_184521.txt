@@ -1,0 +1,16 @@
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week10/day6/daily-challenge/index.html
+suggestions for improvement:
+- The code is missing the `script.js` file which contains the `fetchData` function.  The challenge requires the form data to be displayed as a JSON string on the DOM. The current HTML only sets up the form.
+- Add error handling for cases where the user doesn't fill in the form fields.  Currently, an empty JSON object will be displayed.
+- Improve the presentation of the JSON output.  Use `JSON.stringify` with formatting options for better readability (e.g., indentation).
+Correctness: 80%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week10/day6/daily-challenge/script.js
+suggestions for improvement:
+- Use more descriptive variable names.  Instead of `data`, consider `formData` or `userInput`.  Instead of `acc`, consider `formObject`.
+- Add error handling.  What happens if the form elements aren't found?  A `try...catch` block would improve robustness.
+- Consider using a more modern approach to creating the JSON string.  `JSON.stringify()` is fine, but techniques such as template literals could enhance readability.
+- Improve accessibility by adding labels to the form inputs.  This is crucial for screen readers and users with disabilities.
+- Add input validation to prevent users from submitting invalid data.
+Correctness: 90%
+-----
