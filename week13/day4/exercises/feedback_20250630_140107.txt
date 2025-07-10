@@ -1,0 +1,62 @@
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week13/day4/exercises/blog-api/package.json
+suggestions for improvement:
+- The provided code is only a `package.json` file.  It doesn't contain the actual server code (`server.js` as requested in Exercise 1) needed to implement the RESTful API.
+- The exercises require the creation of `server.js` (Exercise 1), `app.js` (Exercise 2), and additional files for Exercise 3.  None of these files are present.
+- Implement the CRUD operations (GET, POST, PUT, DELETE) as described in Exercise 1 and Exercise 2.
+- Exercise 3 requires using Axios to fetch data from JSONPlaceholder and creating a separate data module. This is completely missing.
+Correctness: 20%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week13/day4/exercises/blog-api/server.js
+suggestions for improvement:
+- Improve error handling to provide more informative error messages to the client.
+- Implement input validation to prevent injection attacks and handle unexpected data types.
+- Consider using a more robust data store than an in-memory array for production environments.  This in-memory solution won't persist data across server restarts.
+- Add logging to track requests and errors for debugging and monitoring.
+- Use a more descriptive variable name than `data` (e.g., `blogPosts`).
+- The `Math.max(...data.map((post) => post.id)) + 1` approach for generating IDs is inefficient for large datasets. Consider using a UUID library for better performance and unique ID generation.
+Correctness: 95%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week13/day4/exercises/book-api/app.js
+suggestions for improvement:
+- Implement PUT and DELETE routes to complete the CRUD functionality as requested in Exercise 2.  The code only implements GET and POST.
+- Improve error handling.  While basic error handling is present, more robust error handling for various scenarios (e.g., data validation, unexpected exceptions) is needed.
+- Use a more persistent data store than an in-memory array. An in-memory array will lose data on server restarts. Consider using a database (like MongoDB, PostgreSQL) or a file system for persistence.
+- Add input validation to prevent injection attacks.  Sanitize user inputs before using them in queries or responses. For example, check for and escape special characters.
+- Add more comprehensive logging to aid in debugging and monitoring.
+Correctness: 90%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week13/day4/exercises/book-api/package.json
+suggestions for improvement:
+- The provided code is only a `package.json` file.  It doesn't contain any of the Express.js code needed to fulfill the requirements of Exercises 1, 2, or 3.  It only shows that the `express` package is installed. The exercises require the creation of `server.js` (or `app.js`), the implementation of CRUD operations, and potentially the use of Axios and a separate data module.
+- Create the `app.js` (or `server.js`) file and implement the CRUD operations as described in the exercises.
+- Implement error handling for invalid routes and server errors (Exercise 1).
+- For Exercise 3, create the `data` directory and the `dataService.js` file to handle data retrieval using Axios.
+Correctness: 20%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week13/day4/exercises/crud-api/app.js
+suggestions for improvement:
+- The code only implements a single GET route fetching data from an external API.  Exercises 1 and 2 require building full CRUD APIs for blog posts and books, respectively. Exercise 3 asks for a CRUD API using the JSONPlaceholder API, but this only implements the read functionality.  Missing POST, PUT, and DELETE functionality.
+- Error handling is minimal. The code assumes the external API always returns successfully.  Robust error handling is needed to deal with network failures, API errors, and data validation.
+- The `data` directory and `dataService.js` are correctly structured for Exercise 3, Part 2. However, the provided code only implements one function to retrieve data, lacking the implementation of other CRUD operations.
+- Input validation is missing. The code does not validate the data received from the external API or data sent to it.  It should ensure the integrity and type of data.
+- Consider adding more descriptive logging to improve debugging capabilities.
+Correctness: 30%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week13/day4/exercises/crud-api/data/dataService.js
+suggestions for improvement:
+- Add error handling to the `fetchPosts` function to gracefully handle network errors or API issues.  For example, use a `try...catch` block and return an appropriate error message or throw an error.
+- Consider adding a timeout to the axios request to prevent indefinite blocking.
+- The code is concise and easy to understand.  Adding comments explaining the purpose of the function would enhance readability slightly.
+Correctness: 100%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week13/day4/exercises/crud-api/package.json
+suggestions for improvement:
+- The provided code is only a `package.json` file. It doesn't contain the actual implementation for exercises 1, 2, and 3.  The `package.json` correctly lists the necessary dependencies (express and axios), which is a good start. 
+- Implement the `server.js`, `app.js`, and `dataService.js` files as described in the exercises to achieve a higher correctness score.
+- Add error handling (try-catch blocks) to `dataService.js` to gracefully handle potential network errors or issues with the JSONPlaceholder API.
+- Consider using a more robust data storage solution than in-memory arrays (e.g., a database) for production environments to improve scalability and data persistence.
+- In Exercise 2 and 3, implement the full CRUD operations (create, read, update, delete) as instructed. Currently only parts of the API are mentioned.
+- Sanitize user inputs to prevent injection attacks (e.g., using parameterized queries if a database is used).
+- Add input validation to prevent unexpected errors and improve data integrity (e.g., checking for correct data types and ranges).
+Correctness: 60%
+-----
