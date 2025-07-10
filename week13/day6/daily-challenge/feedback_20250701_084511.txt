@@ -1,0 +1,17 @@
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week13/day6/daily-challenge/app.js
+suggestions for improvement:
+- Use express.Router() for better organization and structure. The current implementation mixes all routes in the main app.
+- Implement proper error handling.  What happens if the user provides an invalid question ID or submits a request with missing data? Add checks and send appropriate error responses.
+- The quiz uses GET requests to fetch questions and POST requests to submit answers. While functional, a consistent approach using POST for both actions could improve the design.  GET requests should ideally be used only for retrieving data; POST for modifications.
+- The solution is hardcoded to only three questions.  Consider making the `triviaQuestions` array more dynamic or loading it from an external source (database, file) to enhance flexibility.
+- Sanitize user inputs to prevent potential vulnerabilities (e.g., cross-site scripting).
+- The `/quiz/:id` route should likely be removed and the quiz flow handled only via POST to `/quiz`.  A separate endpoint, if needed, could be created to display just the score.
+Correctness: 70%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week13/day6/daily-challenge/package.json
+suggestions for improvement:
+- The provided code is a `package.json` file, not an implementation of the trivia quiz game.  It only sets up the project dependencies.  The actual Express.js code and game logic are missing.
+- Implement the Express.js server, routes (`/quiz`, `/quiz/score`), and the trivia game logic as described in the chapter content.
+- Create the `triviaQuestions` array and manage the quiz state (current question, score) within the server-side code.
+Correctness: 0%
+-----
