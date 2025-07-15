@@ -1,0 +1,7 @@
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week15/day2/daily-challenge/vite-project/src/App.jsx
+suggestions for improvement:
+- The code could be slightly improved by using a `map` function to iterate over an array of images, making it easier to manage and extend if more images are added.  This would improve maintainability.
+- Add alt text to the images for accessibility.
+- Consider styling the carousel further using CSS to better match the provided demo image.
+Correctness: 100%
+-----

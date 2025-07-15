@@ -1,0 +1,41 @@
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week15/day4/exercises/src/App.jsx
+suggestions for improvement:
+- **Exercise 1 Part II:**  The instructions ask for a functional component and using the `useState` hook to manage the car's color.  The provided code appears to use JSX, but it's unclear if `CarInfo` uses `useState`. The solution should explicitly show the `useState` hook within the `Car.js` component and demonstrate how the color is updated and displayed.
+- **Exercise 1 Part III:** While the code imports `CarInfo`,  it doesn't directly show the integration of the `Garage` component within `Car.js`. The solution needs to clearly demonstrate how the `Garage` component is used and props are passed.
+- **Exercise 2, 3, and 4 are missing:** The provided code only addresses a portion of Exercise 1.  The solution should include separate functional components for `Events`, `Phone`, and `Color` according to the instructions in those exercises.
+- Improve Component Naming:  Using `CarInfo` instead of `Car` is slightly unconventional.  More descriptive names generally improve readability.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week15/day4/exercises/src/components/car.jsx
+suggestions for improvement:
+- The code doesn't explicitly create separate components for `Car.js` and `Garage.js` as instructed.  It should be broken into three separate files: App.js, Components/Car.js, and Components/Garage.js.  The Garage component should be imported and used within Car.js.
+- The `carinfo` object is not created within `App.js` and passed as props to the `Car` component. The props are not destructured properly to access `name` and `model`.
+- The exercise expects a class component in Part I, but the provided code uses a functional component and a state hook. Although functional components and hooks are a valid and even preferred modern approach in React, it doesn't fully address the explicit requirement.
+- Error handling is missing: There is no check to ensure props `name` and `model` exist.  If these are missing, the app will crash.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week15/day4/exercises/src/components/color.jsx
+suggestions for improvement:
+- The code for Exercise 4 is missing the functionality to change the color on a button click and the `useEffect` hook is not used to alert 'useEffect reached'.  The `useEffect` hook should also have a cleanup function to prevent memory leaks if the component unmounts before the timeout completes.
+- Add more robust error handling and input validation where necessary (especially for user input in Exercise 2).
+Correctness: 80%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week15/day4/exercises/src/components/events.jsx
+suggestions for improvement:
+- The code is well-structured and easy to follow.  Consider adding comments to explain the purpose of each function, especially for those who are less familiar with React hooks.
+- While the functionality is correct, using more descriptive variable names (e.g., `isButtonOn` instead of `isToggleOn`) could enhance readability.
+Correctness: 100%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week15/day4/exercises/src/components/garage.jsx
+suggestions for improvement:
+- Add prop-types for better type checking and documentation.  This would improve readability and maintainability.
+- Consider using a more descriptive component name than just `default`.  For example, `Garage` is much clearer.
+Correctness: 100%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week15/day4/exercises/src/components/phone.jsx
+suggestions for improvement:
+- Add a descriptive text to the button to improve user experience.  For example: `onClick={() => setColor('blue')} >Change Color</button>`. 
+- The code for Exercises 1, 2, and 4 are missing. The provided code only addresses part of Exercise 3.  Complete the other exercises to achieve a higher correctness score.
+- Consider adding error handling or input validation if the application requires user input (which is implied in Exercise 2).
+Correctness: 80%
+-----
