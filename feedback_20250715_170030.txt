@@ -1,0 +1,46 @@
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week16/day2/exercises/src/App.jsx
+suggestions for improvement:
+- The provided code is a basic React counter app. It does not address any of the exercises outlined in the chapter content (React Router, Error Boundaries, JSON handling, etc.).
+- The code needs to be rewritten to implement the functionalities described in exercises 1, 2, 3, and 4.
+- Implement React Router, Error Boundary, and JSON data handling as per the instructions in the chapter content.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week16/day2/exercises/src/components/ErrorBoundary.jsx
+suggestions for improvement:
+- The `ErrorBoundary` component is well-structured and functional, but it could be improved by providing more informative error messages to the user instead of just displaying the raw error object. Consider adding a fallback UI that's more user-friendly, including a button to retry or contact support.
+- The exercise mentions using React Router. The provided code only implements the `ErrorBoundary` component, it doesn't integrate with React Router.  The solution should demonstrate how to use it within a React Router context, wrapping the routes that might throw errors.
+- The exercise requests specific images and components (HomeScreen, ProfileScreen, ShopScreen). The solution should provide these components for completeness.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week16/day2/exercises/src/components/PostList.jsx
+suggestions for improvement:
+- The code correctly displays JSON data from `data.json` as requested in Exercise 2.  However, it doesn't handle potential errors during JSON parsing or loading. Add error handling.
+- Consider using a more descriptive component name than `function ()`.  Something like `PostList` would be more appropriate and aligns better with the exercise instructions.
+- The `key` prop is assigned an index which is technically correct, but ideally, it should use a unique identifier from the JSON data itself (e.g., an ID field if available) for better performance and maintainability.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week16/day2/exercises/src/pages/Home.jsx
+suggestions for improvement:
+- The code only partially addresses Exercise 1. It uses React Router for navigation but doesn't implement the `ErrorBoundary` component correctly. It also doesn't include the `HomeScreen`, `ProfileScreen`, and `ShopScreen` components or the routing for those screens as specified.
+- The code correctly handles Exercise 2 by displaying data from a JSON file using the `PostList` component.
+- Exercises 3 and 4 are entirely missing from the provided code.
+Correctness: 60%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week16/day2/exercises/src/pages/Profile.jsx
+suggestions for improvement:
+- The code doesn't implement React Router.  It uses Bootstrap buttons with href attributes, which are not React Router's NavLinks. This directly contradicts instruction 5 and 7.
+- The ErrorBoundary component is used, but it only wraps a simple 'h3' tag, not the functional components as instructed in step 8. 
+- No JSON file is used, nor is any data fetched or displayed.  Exercises 2, 3 and 4 are entirely missing.
+- The `HomeScreen`, `ProfileScreen`, and `ShopScreen` components, along with their routing, are entirely absent. This is critical to solving Exercise 1.
+- Add `BrowserRouter` to wrap the routes for proper routing functionality (as mentioned in step 3, but not implemented).
+Correctness: 20%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week16/day2/exercises/src/pages/Shop.jsx
+suggestions for improvement:
+- The code only partially implements Exercise 1. It uses ErrorBoundary but doesn't create the component or handle routing properly.  It also misses Exercises 2, 3, and 4 entirely.
+- The `ErrorBoundary` component needs to be defined separately to catch errors within its children components.
+- React Router components (BrowserRouter, Routes, Route, NavLink) are missing, preventing proper routing.
+- The three functional components (HomeScreen, ProfileScreen, ShopScreen) are not defined and integrated with the router.
+- Exercises 2, 3, and 4 related to JSON data handling and fetching are completely absent.
+Correctness: 20%
+-----
