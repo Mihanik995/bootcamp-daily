@@ -1,0 +1,6 @@
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week15/day6/daily-challenge/src/App.jsx
+suggestions for improvement:
+- The code doesn't handle URL parameter submission on form submit.  It updates the state but doesn't reflect this in the URL as per the requirements. Add code to construct the URL with query parameters using the data state.
+- The `handleChange` function is not explicitly defined, though the functionality it would contain is implied in the event handlers.  Creating a reusable `handleChange` function would improve maintainability and readability.
+Correctness: 90%
+-----
