@@ -1,0 +1,27 @@
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week13/day4/daily-challenge/app.js
+suggestions for improvement:
+- The code only sets up the server and provides endpoints for fetching the emoji data.  It lacks the crucial game logic:  random emoji selection, multiple-choice option generation, form handling, score tracking, and feedback mechanisms.  The client-side (using Fetch API and HTML form) is entirely missing.
+- The `app.listen` is missing a callback to confirm the server is running.
+- Error handling is absent.  The application should handle potential errors gracefully (e.g., if the emoji array is empty).
+- Security: While the provided code doesn't have explicit security vulnerabilities, it's missing essential measures like input validation (which would be crucial once form handling is implemented).
+- The leaderboard functionality is completely absent.
+Correctness: 60%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week13/day4/daily-challenge/package.json
+suggestions for improvement:
+- The provided code is a `package.json` file. It sets up the project dependencies (Express.js and EJS) but does not contain the actual code for the emoji guessing game.  It needs the actual server-side and client-side code to fulfill the requirements.
+- The `package.json` is well-structured and easy to understand.  The dependencies are correctly listed.
+- Add server-side code (in `app.js`) to handle the emoji data, generate random choices, process player guesses, manage scores, and handle requests using Express.js.
+- Add client-side code (likely HTML with embedded Javascript or a separate JS file) to display the game interface, handle user input, send guesses via Fetch API to the backend, and update the UI based on responses.
+Correctness: 20%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week13/day4/daily-challenge/public/js/script.js
+suggestions for improvement:
+- The code lacks a backend Express server as required.  It assumes a `/emojis` endpoint exists to fetch data, but doesn't implement it.
+- Error handling could be improved.  More specific error messages would be helpful for debugging and user experience.
+- The leaderboard functionality is missing.  The challenge requires tracking and displaying top scores.
+- The code uses inline styles (result.style.color). It's better practice to use CSS classes for styling.
+- Add a clear indication to the user how to submit their answer.  A submit button would improve UX.
+- The form and POST request using the Fetch API are missing in the provided client-side code.  The code only performs a GET request.
+Correctness: 85%
+-----
