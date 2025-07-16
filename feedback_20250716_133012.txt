@@ -1,0 +1,8 @@
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week16/day4/daily-challenge/src/App.jsx
+suggestions for improvement:
+- Add input validation to handle non-numeric input.  Currently, entering non-numeric values will lead to NaN in the sum.
+- Implement the bonus feature: a select element to allow users to choose different operations (subtraction, multiplication, division).
+- Improve readability by adding more descriptive variable names (e.g., num1, num2, result instead of first, second, sum).
+- Consider using a more user-friendly way to handle the undefined sum initially (e.g., display '0' or 'Result:').
+Correctness: 90%
+-----
