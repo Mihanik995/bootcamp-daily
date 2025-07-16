@@ -1,0 +1,25 @@
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week16/day2/daily-challenge/client/src/App.jsx
+suggestions for improvement:
+- The server-side code (server.js) is missing.  The instructions explicitly require creating a server with GET and POST routes.
+- Error handling is minimal.  The `fetch` calls should include error handling to gracefully manage network issues or server errors.
+- The `ServerForm` component is not provided, making it impossible to assess its correctness and adherence to the requirements.  It should handle form submission and display the POST response.
+- Security considerations are lacking. Input sanitization should be implemented on the server-side to prevent vulnerabilities like cross-site scripting (XSS).
+- Hardcoded URL in the fetch request. Better to use environment variables or configuration for the server URL.
+Correctness: 90%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week16/day2/daily-challenge/client/src/components/ServerForm.jsx
+suggestions for improvement:
+- The code is missing the Part I implementation (GET request handling).
+- Error handling is missing in the fetch call.  The application should gracefully handle network errors or server-side issues.
+- The server-side code (server.js) is missing. The assessment cannot be fully evaluated without the server implementation.
+- Input sanitization should be added to prevent injection attacks on the server side.
+- Use a more descriptive variable name than `message` in both the client and server-side code. This would improve readability.
+Correctness: 70%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week16/day2/daily-challenge/server/app.js
+suggestions for improvement:
+- Add error handling for cases where the request body is missing or malformed in the POST route.
+- Improve the CORS configuration for production environments; hardcoding allowed origins is generally not recommended.
+- Add input sanitization to prevent XSS vulnerabilities in the POST route.  Escape or sanitize the `req.body.message` before including it in the response.
+Correctness: 95%
+-----
