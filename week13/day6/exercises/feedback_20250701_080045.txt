@@ -1,0 +1,78 @@
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week13/day6/exercises/ex1/app.js
+suggestions for improvement:
+- The provided code only sets up the Express.js application and mounts a router.  It's missing the crucial implementation details for Exercises 1, 2, and 3.  Specifically, the `routes/index.js` file (and `routes/todos.js`, `routes/books.js` for the later exercises) are not provided, leaving the routes undefined. 
+- Error handling is missing. The application should handle potential errors gracefully, such as connection errors or invalid requests. 
+- For Exercise 2 and 3, the in-memory database is extremely limited and not suitable for production.  A persistent data store (like a database) should be considered. 
+- The security score is lowered due to the lack of input validation and sanitization which makes the application vulnerable to injection attacks. 
+- Add a message to the console indicating that the server is listening on port 3000 to aid debugging and monitoring. 
+- Consider using environment variables for the port number to improve flexibility and maintainability.  The `process.env.PORT` could be used, falling back to 3000 if it's not set.
+- The `app.listen` function lacks a callback to handle errors during server startup.  This makes error reporting difficult.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week13/day6/exercises/ex1/package.json
+suggestions for improvement:
+- The provided code is a `package.json` file, not the implementation of the exercises.  It only sets up the project dependencies. The actual code for exercises 1, 2, and 3 is missing.
+- Add `app.js`, `routes/index.js`, `routes/todos.js`, and `routes/books.js` files with the implementation of the Express.js applications as described in the instructions.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week13/day6/exercises/ex1/routes/index.js
+suggestions for improvement:
+- The routes only send a 200 status code.  The instructions suggest that the routes should send more meaningful responses, such as 'Homepage' and 'About Us page' for `/` and `/about`, respectively.  This would improve user experience when testing.
+- The code is missing the `app.js` and the implementation of exercises 2 and 3. The evaluation is based only on the provided `routes/index.js` file, which partially addresses exercise 1.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week13/day6/exercises/ex2/app.js
+suggestions for improvement:
+- The provided code is a basic Express.js server setup, but it lacks the crucial implementation details for exercises 2 and 3.  There's no actual routing or CRUD functionality for to-dos or books.
+- The `todos.js` and `books.js` router files, mentioned in Exercises 2 and 3, are missing. The server will start but not provide the expected functionality.
+- Add error handling. The current code lacks any error handling, which is crucial for a production-ready application.
+- Implement input validation to prevent vulnerabilities such as injection attacks.
+- The security score is low because it lacks essential security measures such as input validation and proper error handling.  It doesn't protect against common web vulnerabilities.
+- Add more comprehensive testing for each endpoint (GET, POST, PUT, DELETE).
+- Consider using a more robust database solution than an in-memory array (e.g., MongoDB, PostgreSQL) for persistent storage.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week13/day6/exercises/ex2/package.json
+suggestions for improvement:
+- The provided code is a `package.json` file, not the implementation of exercises 1, 2, or 3.  It only sets up the project dependencies. The actual Express.js code for the exercises is missing.
+- Add the actual `app.js`, `routes/index.js`, and `routes/todos.js` (or `routes/books.js`) files with the implementation of the routing and logic as described in the exercises.
+- Implement the CRUD operations (Create, Read, Update, Delete) for the to-do list and/or books API as instructed.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week13/day6/exercises/ex2/routes/todos.js
+suggestions for improvement:
+- Improve error handling for invalid input (e.g., non-numeric IDs).
+- Implement proper input validation to prevent unexpected behavior or security vulnerabilities.
+- Use a more robust data store than an in-memory array (e.g., a database) for persistence.
+- Add better error handling and responses for unsuccessful operations, including more informative error messages.
+- Consider using a more expressive status code for updates (e.g., 204 No Content) instead of sending the entire array again.
+- The `PUT` request uses array index, but should use a unique ID which is not given in the example. The example uses `id` as the index which is not very robust and error prone.
+- The `PUT` route should check if a todo with the given ID exists before updating
+Correctness: 80%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week13/day6/exercises/ex3/app.js
+suggestions for improvement:
+- The `routes/books.js` file is missing, which is crucial for the functionality described in Exercise 3.  The provided code only sets up the Express app and mounts a router; it doesn't define the actual book management routes.
+- Error handling is missing. The app should gracefully handle errors such as invalid input or database issues.
+- Input validation is missing.  The app should validate the data received from POST and PUT requests to prevent unexpected behavior or vulnerabilities.
+- The in-memory database (`books` array) is not ideal for a production application. Consider using a more robust database solution (e.g., MongoDB, PostgreSQL) for persistence.
+- Add a message on successful request
+- Consider adding middleware to handle logging and request tracing for better debugging and monitoring.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week13/day6/exercises/ex3/package.json
+suggestions for improvement:
+- The provided code is a `package.json` file.  It's a necessary part of a Node.js project, defining project metadata and dependencies, but it doesn't contain any of the actual Express.js code required to solve Exercises 1, 2, or 3.  You need to provide the `app.js` and `routes/books.js` (or `routes/todos.js`) files with the Express.js code to implement the exercises.
+- Implement the `app.js` file to create the Express app, set up the port, and mount the router.
+- Implement the `routes/books.js` (or `routes/todos.js` for Exercise 2) file with the actual route handlers for GET, POST, PUT, and DELETE operations, including handling JSON request bodies.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week13/day6/exercises/ex3/routes/books.js
+suggestions for improvement:
+- The ID handling in `PUT` and `DELETE` routes is flawed.  It uses the ID as an array index, which is problematic if IDs aren't sequential or start from 0.  Use a more robust method for finding books by ID (e.g., searching the array for a book with a matching ID property).
+- Add input validation to prevent unexpected behavior or security vulnerabilities.  Check if `req.body` contains the expected data for POST and PUT requests. Handle cases where data is missing or improperly formatted.
+- The in-memory database (`books` array) is not suitable for a production environment. For a real application, consider using a database (like MongoDB, PostgreSQL, etc.) for persistent storage.
+- The error handling is minimal.  Provide more informative error messages (instead of just sending 400 status codes) to help with debugging and user experience. Consider using a standardized error handling mechanism.
+- Implement better security practices. Sanitize inputs to prevent injection attacks (e.g., if the book title can come from the client, then sanitize it to avoid XSS).  For a production application, never rely on client-supplied IDs as the only source for identifying resources.
+Correctness: 80%
+-----

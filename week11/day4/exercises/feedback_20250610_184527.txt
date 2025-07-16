@@ -1,0 +1,8 @@
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week11/day4/exercises/exercises.js
+suggestions for improvement:
+- Exercise 2 is missing the `.then()` and `.catch()` handlers to fully demonstrate promise usage and error handling.  It should also include a `console.log` statement within the `.then()` block.
+- Exercise 3 creates the promises correctly, but it doesn't handle their resolution or rejection.  The code should include `.then()` and `.catch()` blocks to demonstrate how to work with resolved and rejected promises.
+- Add more comprehensive error handling in Exercise 1, potentially checking for non-numeric inputs.
+- Consider using more descriptive variable names (e.g., instead of `num`, use `number`).
+Correctness: 90%
+-----
