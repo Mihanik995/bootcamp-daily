@@ -1,0 +1,8 @@
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week16/day4/random-quote-generator/src/App.jsx
+suggestions for improvement:
+- The code doesn't prevent the same quote from appearing twice in a row.  Implement a mechanism to ensure that the next quote is different from the current one.
+- The code lacks functionality for changing the background, header, and button colors randomly. Add this feature.
+- Add error handling for the case where `quotes.json` is empty or improperly formatted.
+- Consider using a more robust method for generating random colors.  The current implementation (which is not present) might produce undesirable colors or accessibility issues.
+Correctness: 70%
+-----
