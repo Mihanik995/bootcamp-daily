@@ -1,0 +1,18 @@
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week11/day4/daily-challenge/daily-challenges.js
+suggestions for improvement:
+- In `makeAllCaps`, using `Array.every` instead of `Array.some` with a negated condition would improve readability.  `Array.every` directly checks if every element satisfies a condition.
+- The error messages in both challenges could be more informative. For example, instead of 'invalid data', specify which element caused the error.  Similarly, in `toMorse`, specifying the invalid character would be helpful.
+- In `toMorse`, consider adding input validation to handle cases where the user enters only whitespace or nothing at all.
+- For Challenge 2, the code directly uses `prompt`.  For better user experience and to avoid blocking execution, it would be better to use an input field on the page. 
+- Add error handling for the case where there is no `<h1>` tag in the HTML.  This would prevent an error if the `joinWords` function is called before the `<h1>` element is present.
+Correctness: 95%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week11/day4/daily-challenge/index.html
+suggestions for improvement:
+- The `makeAllCaps` function should explicitly handle cases where the input array is empty. Currently, it implicitly resolves to an empty array, which might not be the intended behavior.
+- The error handling in `makeAllCaps` and `sortWords` could be improved.  Instead of just rejecting with a generic message, provide more specific error messages indicating the problem (e.g., 'Array contains non-strings', 'Array length is less than 4'). This improves debugging.
+- In `toMorse`, add input validation to handle empty user input or input containing only whitespace. Currently, it will try to process an empty array, which might lead to unexpected behavior.
+- The `joinWords` function should be more robust. It directly manipulates the DOM, and there's no error handling (what if the element to append to doesn't exist?). Consider using a more standard approach like creating a new element and appending it.
+- The `toJs` function should use `JSON.parse` for better error handling and clarity instead of `eval`.  `eval` is generally discouraged due to security risks if the JSON string comes from an untrusted source.  Handle JSON parse errors gracefully.
+Correctness: 85%
+-----
