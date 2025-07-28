@@ -1,0 +1,41 @@
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week13/day2/daily-challenge/app.js
+suggestions for improvement:
+- The `app.js` file should be more clearly structured to separate the calls to different modules.  Consider using functions or comments to delineate the sections for each task.
+- Error handling is missing. The `readFile` function should include error handling using `try...catch` to gracefully handle potential file reading errors.  This is important for robustness.
+- The `colorful-message.js` and `read-file.js` files are not provided, making a complete assessment impossible.  The score assumes these files correctly implement their respective tasks based on the instructions.
+- The challenge task (integrating all modules in `challenge.js`) is missing.  The provided code only runs parts of the challenges separately.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week13/day2/daily-challenge/challenge.js
+suggestions for improvement:
+- The `app.js` files in Tasks 1, 2, and 3 should be replaced with a single `app.js` file that imports and uses all three modules (`greeting.js`, `colorful-message.js`, and `read-file.js`). This is consistent with the structure presented in the Challenge Task.
+- The `challenge.js` file should explicitly call the functions from `greeting.js`, `colorful-message.js`, and `read-file.js` to demonstrate their integration.  The current provided code only imports the modules, but does not call any functions from them, except for what appears to be the case of `readFile()`.
+- Error handling (e.g., `try...catch` blocks) should be added to the `read-file.js` to gracefully handle potential file reading errors. 
+- The `colorful-message.js` file should be designed to receive a message as a parameter and then color it. Currently the provided code doesn't show this implementation.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week13/day2/daily-challenge/colorful-message.js
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week13/day2/daily-challenge/greeting.js
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week13/day2/daily-challenge/package.json
+suggestions for improvement:
+- Add error handling for file operations in `read-file.js` (e.g., checking if the file exists before attempting to read it).
+- The `app.js` files in Tasks 1 and 2 should be renamed to avoid conflict.  Using a consistent naming convention (e.g., `app_task1.js`, `app_task2.js`) would improve organization.
+- In `colorful-message.js`,  consider making the message a parameter to allow for greater flexibility.
+- The challenge task should explicitly call functions from each of the other files to demonstrate integration.
+Correctness: 90%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week13/day2/daily-challenge/read-file.js
+suggestions for improvement:
+- The `readFile` function should be made asynchronous and return a Promise or use async/await to handle the asynchronous nature of `fs.readFile`.  Currently, it only prints to the console and doesn't allow other parts of the application to use the file content.
+- Add error handling for cases where the file doesn't exist.  Currently, it only logs the error to the console which might not be ideal for a larger application.
+- The challenge requires an `app.js` file to import and use `read-file.js`.  This code snippet only provides `read-file.js`.
+Correctness: 80%
+-----

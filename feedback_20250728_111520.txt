@@ -1,0 +1,29 @@
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week17/day6/exercises/ex1/src/hooks/ThemeContext.jsx
+suggestions for improvement:
+- The provided code only implements the ThemeContext.  It's missing the crucial `ThemeSwitcher` component and the application of theme styles to other components, which are explicitly required in Exercise 1.  The instructions specify that the `ThemeSwitcher` should toggle between light and dark themes and that other components should use `useContext` to apply theme styles. The example starter code demonstrates this, which this code omits.
+- The `ThemeContext` should ideally include a `toggleTheme` function for easier state management within the context, rather than relying on the consumer to call `setTheme` directly.
+- Add error handling in `useTheme` to provide more informative error messages if the context is missing.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week17/day6/exercises/ex1/src/App.jsx
+suggestions for improvement:
+- The `ThemeContext` should be explicitly exported from a dedicated file (like `ThemeContext.js` as suggested in the exercise). The current implementation relies on implicit importing via './hooks/ThemeContext.jsx', which is less clear and maintainable.
+- The button's styling could be improved for better visual clarity and separation of concerns. Consider separating the theme-specific styles from the button's base styles.
+- Error handling is missing.  What happens if `useTheme` doesn't find a provider?  It should ideally throw a meaningful error message.
+- Add more robust CSS classes instead of relying directly on the theme name in the className attribute.  This will improve maintainability.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week17/day6/exercises/ex1/src/index.css
+suggestions for improvement:
+- Implement the ThemeContext.js and App.js components as described in the instructions to fulfill the requirements of Exercise 1.
+- Implement the CharacterCounter component as described in the instructions to fulfill the requirements of Exercise 2.
+- Exercise 3 (Todo List) is not implemented.  Add this component using useReducer as specified.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week17/day6/exercises/ex2/src/App.jsx
+suggestions for improvement:
+- The code does not implement the theme switcher or todo list exercises as described in the chapter content.
+- The character counter implementation uses a `ref` to directly manipulate the DOM element's text content, which is not the most React-idiomatic approach. It's better to manage the state using `useState` and reflect that state in the JSX.
+- The character counter should update the displayed count in real-time, it only updates when the input loses focus.
+Correctness: 20%
+-----

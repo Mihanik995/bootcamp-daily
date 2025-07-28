@@ -1,0 +1,75 @@
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week13/day6/exercises/ex1/app.js
+suggestions for improvement:
+- The provided code only sets up the Express.js application and mounts a router.  It lacks the actual route definitions in `./routes/index.js`  required to fulfill exercises 1, 2, and 3. The exercises require specific routes to be defined and tested.
+- Error handling is missing.  The application should gracefully handle potential errors, such as invalid requests or database issues.
+- Security is lacking. The application doesn't implement any input validation or protection against common web vulnerabilities (e.g., XSS, SQL injection – although not applicable here since no database is used).  For a production environment, adding these measures is crucial.
+- The `app.listen(3000)` line lacks error handling. If the port is already in use, the application will crash silently. It should include a `.catch()` block to handle potential errors and log them appropriately.
+- Add better logging to aid in debugging and monitoring.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week13/day6/exercises/ex1/package.json
+suggestions for improvement:
+- The provided code is a `package.json` file. It defines project metadata and dependencies, but it doesn't contain any of the Express.js code required to solve the exercises.  The exercises require creating `app.js` and `routes/*.js` files with specific Express.js functionality.
+- Implement the `app.js` file to set up the Express application, including creating a server and listening on a port (e.g., 3000).
+- Implement the route handlers in `routes/index.js`, `routes/todos.js`, and `routes/books.js` according to the instructions, using `express.Router()` to define the routes and handling GET, POST, PUT, and DELETE requests appropriately.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week13/day6/exercises/ex1/routes/index.js
+suggestions for improvement:
+- The routes only send a 200 status code.  The instructions suggest sending a response body, providing content for the homepage and about page.  For example, `res.send('Homepage')` and `res.send('About Us page')`.
+- Add error handling.  Currently, any unexpected errors in the route handlers will cause the server to crash without logging or user-friendly error messages. Consider using `try...catch` blocks and logging errors using a suitable logging library.
+- The `security` score is lowered because there's no input validation.  While not directly required, real-world applications need input validation to prevent vulnerabilities.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week13/day6/exercises/ex2/app.js
+suggestions for improvement:
+- The code is missing the implementation of the to-do list API endpoints within the `todos.js` router file.  The instructions specify CRUD operations (Create, Read, Update, Delete) for to-do items, which are entirely absent.
+- Error handling is missing. The application should gracefully handle potential errors (e.g., invalid input, database errors).
+- Input validation is missing.  The application should validate the input data to prevent issues like injection attacks and data corruption.
+- Add a `.catch` block to the `app.listen` to handle errors properly.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week13/day6/exercises/ex2/package.json
+suggestions for improvement:
+- The provided code is a `package.json` file, not an implementation of the exercises.  It only sets up the project dependencies.  The exercises require creating `app.js` and `routes/todos.js` (or `routes/books.js`) files with the appropriate Express.js code to handle the routing and CRUD operations.
+- Implement the `app.js` file to create the Express app, use `express.Router()`, define the routes in `todos.js` or `books.js` (as per the exercise instructions), and handle GET, POST, PUT, and DELETE requests.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week13/day6/exercises/ex2/routes/todos.js
+suggestions for improvement:
+- The `PUT` and `DELETE` routes use array index as ID, which is not ideal.  Use a unique ID (e.g., UUID) for each todo item.
+- Error handling is minimal. More informative error messages should be provided to the client.
+- Input validation is missing.  The code should validate the request body before adding or updating to-do items.
+- The in-memory `todos` array is not persistent. Consider using a database for production applications.
+- The `PUT` route has a typo: `res.send(todos[i])` should be `res.send(todos[id])`.
+- Add better documentation explaining the endpoints and request/response formats (especially for POST and PUT).
+Correctness: 80%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week13/day6/exercises/ex3/app.js
+suggestions for improvement:
+- The provided code only includes the `app.js` file.  The `routes/books.js` file, crucial for Exercise 3, is missing.  This file needs to be implemented with the CRUD operations for books.
+- Error handling is absent. The code should include error handling to gracefully manage situations such as invalid input, database errors (if a database were used), and unexpected issues.
+- Input validation is missing.  Before processing requests, the code needs to validate the input data (e.g., checking data types, lengths, and formats) to prevent unexpected errors or vulnerabilities.
+- The code lacks security measures for a production environment. Consider using appropriate HTTP methods (POST for creation, PUT for update, DELETE for delete) and implementing authentication and authorization if this were a real application.
+- Add a homepage route ( '/' ) as instructed in Exercise 1.
+- The `app.listen(3000)` should be placed after the routing to ensure that all routes are registered before the server starts listening
+Correctness: 80%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week13/day6/exercises/ex3/package.json
+suggestions for improvement:
+- The provided code is a `package.json` file, not an implementation of the exercises.  It only defines project metadata and dependencies.  The exercises require creating `app.js`, `routes/index.js`, `routes/todos.js`, and `routes/books.js` files with Express.js code to handle routes and implement CRUD operations.
+- Implement the missing `app.js`, `routes/index.js`, `routes/todos.js`, and `routes/books.js` files with the Express.js code to fulfill the requirements of the exercises.
+- Add error handling to the `todos.js` and `books.js` to gracefully handle invalid inputs and potential errors (e.g., missing parameters, database errors, etc.).
+- For the to-do list and book APIs, consider using a more robust data store than an in-memory array, such as a database (e.g., MongoDB, PostgreSQL) for persistence.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week13/day6/exercises/ex3/routes/books.js
+suggestions for improvement:
+- The ID handling in `PUT` and `DELETE` routes is flawed.  Using the array index as the ID is problematic and can lead to inconsistencies. Implement a proper ID system (e.g., using UUIDs) for better data management.
+- The in-memory database (`books`) is not persistent.  For a real-world application, consider using a database (like MongoDB, PostgreSQL, etc.) to store the data persistently.
+- Add input validation to prevent unexpected data and errors. Validate the book data in the POST and PUT routes.
+- Improve error handling: Provide more informative error messages to the client instead of just sending a 400 status code.
+- Implement better security measures. Sanitize inputs to prevent against potential injection attacks (though this is less critical for a simple in-memory database).
+- The `unshift` method in the POST route adds new books to the beginning of the array; consider using `push` to append to the end for better performance.
+Correctness: 85%
+-----
