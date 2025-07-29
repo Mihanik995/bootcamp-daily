@@ -1,0 +1,97 @@
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week13/day2/exercises/ex1/products.js
+suggestions for improvement:
+- The `products.js` file should include a function to search for products by name, instead of just exporting the array.  The search logic should be encapsulated within the module.
+- The `shop.js` file should explicitly handle cases where a product is not found. Currently it implicitly returns undefined, which isn't ideal.
+- Add error handling to the file reading and writing operations in Exercise 3.  Check if the file exists before attempting to read it, and handle potential errors during file writing.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week13/day2/exercises/ex1/shop.js
+suggestions for improvement:
+- The `products.js` file is missing, making it impossible to fully assess the correctness of the solution.  The code assumes the existence of a `products.js` file exporting an array named `products` with objects having `name`, `price`, and `category` properties.
+- Error handling could be improved. Instead of returning a simple object `{message: 'Product not found'}`, it would be better to throw an error or return null to allow calling functions to handle the case more gracefully. Consider using a more descriptive error message.
+- Add input validation.  Check if the input `name` is a string and not empty before performing the search. This prevents potential errors.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week13/day2/exercises/ex2/app.js
+suggestions for improvement:
+- The code could include error handling for the case where `data` is not an array or contains elements without an `age` property.
+- Adding a descriptive comment explaining the purpose of the ternary operator would enhance readability.
+Correctness: 100%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week13/day2/exercises/ex2/data.js
+suggestions for improvement:
+- The provided code only addresses a small part of Exercise 2. It correctly defines an array of person objects and exports it using ES6 syntax. However, it doesn't include the `app.js` file with the average age calculation function, which is a crucial part of the exercise.
+- Add the `app.js` file and implement the average age calculation as instructed in Exercise 2.
+- Consider adding error handling (e.g., checking if the input array is empty before calculating the average) to improve robustness.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week13/day2/exercises/ex3/app.js
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week13/day2/exercises/ex3/fileManager.js
+suggestions for improvement:
+- The `readFile` function uses a callback, which is suitable for simple cases but could be improved using promises or async/await for better error handling and readability in more complex scenarios.
+- The `writeFile` function uses `appendFile`.  While this works for the exercise, it might not be the desired behavior in all cases. Consider adding a parameter to allow choosing between appending and overwriting.
+- Add error handling for cases where the file to be read does not exist.  The current code only handles errors during the read/write operation itself. 
+- The functions are exported correctly using the ES6 module syntax, which aligns with Exercise 3's requirements. 
+- Consider adding explicit return values from the functions to improve clarity and allow for more robust error handling in calling functions.
+- Document the functions to explain their parameters and return values.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week13/day2/exercises/ex4/todoApp/app.js
+suggestions for improvement:
+- The code lacks error handling.  For instance, what happens if `markAsCompleted` is called with a task that doesn't exist?  Adding error handling would improve robustness.
+- The `TodoList` class implementation is not shown, making it difficult to fully assess its correctness.  Including the `todo.js` file would allow for a more complete evaluation.
+- Consider adding more sophisticated task management features, such as due dates, priorities, or task editing capabilities, to make the `TodoList` class more robust.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week13/day2/exercises/ex4/todoApp/todo.js
+suggestions for improvement:
+- The `markAsCompleted` function could be improved by handling the case where the task is not found.  Currently, if a task is not in the list, it will throw an error. A more robust approach would be to either return a boolean indicating success or failure, or to throw a custom error with a more informative message.
+- Add input validation to the `addTask` method to prevent adding empty or null tasks.
+- Consider adding a method to remove tasks from the list.
+- The `listAll` method currently just logs to the console.  It might be more flexible to return the task list as an array, allowing the calling code to decide how to handle the output.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week13/day2/exercises/ex5/math-app/app.js
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week13/day2/exercises/ex5/math-app/math.js
+suggestions for improvement:
+- The provided code defines functions for addition and multiplication, but it does not address any of the exercises described in the chapter content.  It needs to be replaced with code that implements at least one of the exercises (e.g., creating and using modules, file system operations, using npm packages).
+- The code should be organized into separate files according to the exercise instructions (e.g., `products.js`, `shop.js`, `data.js`, `app.js`, etc.)
+Correctness: 0%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week13/day2/exercises/ex5/math-app/package.json
+suggestions for improvement:
+- This JSON file is a `package.json` file, which is used to manage Node.js project dependencies. It does not contain any code that addresses the exercises in the chapter content.  To receive a correctness score, you need to provide the code for the exercises (Exercise 1-7).
+- Add the actual code for each exercise to receive a proper evaluation.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week13/day2/exercises/ex6/npm-beginner/app.js
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week13/day2/exercises/ex6/npm-beginner/package.json
+suggestions for improvement:
+- This JSON is a `package.json` file.  It doesn't contain any code that addresses the exercises in the chapter content. It only sets up a project to use the `chalk` package.
+- The chapter exercises require creating and using modules, working with the `fs` module, and using the `lodash` package.  This `package.json` only installs `chalk` and doesn't implement any of the described functionality.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week13/day2/exercises/ex7/file-explorer/copy-file.js
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week13/day2/exercises/ex7/file-explorer/read-directory.js
+suggestions for improvement:
+- The provided code only addresses a small part of Exercise 7 (reading a directory). It doesn't implement file copying (Exercise 7's first part) or any of the other exercises.
+- Error handling is minimal.  It throws an error but doesn't provide any specific information or graceful handling.
+- The code lacks modularity.  It should be structured as a separate module (read-directory.js) as instructed.
+Correctness: 20%
+-----

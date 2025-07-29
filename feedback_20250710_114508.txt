@@ -1,0 +1,7 @@
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week15/day2/exercises/vite-project/src/App.jsx
+suggestions for improvement:
+- The `UserFavoriteAnimals` component should be a functional component instead of a class component, aligning with modern React best practices and simplifying the code.
+- Add error handling for missing props in  `UserFavoriteAnimals` to make it more robust.
+- Exercise 3's styling could be improved by using more semantic HTML and CSS classes for better maintainability.  Inline styles are generally discouraged for larger projects. The use of className instead of class is correct, but it's good practice to consistently use the correct naming convention.
+Correctness: 90%
+-----
