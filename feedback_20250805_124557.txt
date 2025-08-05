@@ -1,0 +1,33 @@
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week19/day2/book-inventory-selector/src/App.jsx
+suggestions for improvement:
+- The code lacks the core functionality described in the exercise. It doesn't use Redux, Redux Toolkit, or `createSelector`.  It only implements a basic React component with a dropdown to filter books.  The filtering logic is also done client-side in React, not leveraging Redux selectors.
+- The exercise explicitly requires the use of Redux, `createSelector`, and selectors for specific genres.  This implementation completely omits these crucial aspects.
+- Add Redux store setup with reducers and middleware.
+- Implement `createSelector` to create selectors for different genres.
+- Connect the `BookList` component to the Redux store using `useSelector` and `useDispatch` (React Redux).
+- The `BookList` component should fetch data from the Redux store via the selectors, not manage its own state.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week19/day2/book-inventory-selector/src/features/books/booksSlice.js
+suggestions for improvement:
+- The provided code only defines a Redux slice with initial book data.  It does not implement selectors using `createSelector` as required. 
+- It lacks the React component (`BookList`) to display the book inventory and handle genre selection.
+- There's no Redux store setup, middleware, or connection to a React component via `react-redux`.
+- Selectors for specific genres (`selectHorrorBooks`, `selectFantasyBooks`, `selectScienceFictionBooks`) are missing.
+- The `createSlice` approach is fine, but the exercise specifically requests the use of `createSelector` for performance optimization, which is not present.
+Correctness: 20%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week19/day2/book-inventory-selector/src/features/books/bookSelectors.js
+suggestions for improvement:
+- The code is missing the Redux store setup, reducers, React component implementation, and UI interaction parts.  The exercise explicitly requires creating a Redux store, reducers to manage the book inventory state, and a React component (`BookList`) to display the data and handle UI interactions.  The provided code only focuses on the selector creation part.
+- Error handling is missing. The selectors should handle cases where the state is undefined or the `books` array is empty to prevent runtime errors.
+- The selectors could be made more generic. Instead of creating separate selectors for each genre, a single selector could take the genre as an argument, making the code more reusable and maintainable.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week19/day2/book-inventory-selector/src/components/BookList.jsx
+suggestions for improvement:
+- The conditional logic using nested ternary operators to select the appropriate selector could be improved for readability. Consider using a switch statement or a lookup object for better clarity.
+- Add error handling for the case where the `category` prop is invalid or not handled by the selectors.  Currently, it defaults to `null`, resulting in no books displayed, which might be confusing to the user.  A clear message indicating an invalid category would improve the user experience.
+- The component's name is not descriptive enough.  A name like `GenreBookList` or `CategoryBookList` would be more informative.
+Correctness: 90%
+-----
