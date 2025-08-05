@@ -1,0 +1,28 @@
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week12/day4/daily-challenge/index.html
+suggestions for improvement:
+- The code is missing the crucial JavaScript logic (in `script.js`) to fetch data from the ExchangeRate API, perform the currency conversion, and update the UI.  The HTML structure is good, but without the JavaScript, it's not functional.
+- Implement error handling for API requests (e.g., network errors, invalid API keys).
+- Add input validation to prevent users from entering non-numeric values in the 'amount' field.
+- The 'switch' button functionality (bonus) is not implemented.
+- Consider using a more robust templating engine or framework for better separation of concerns and maintainability.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week12/day4/daily-challenge/script.js
+suggestions for improvement:
+- Add input validation to handle non-numeric input for the amount field.
+- Improve error handling: Instead of just logging errors to the console, provide user-friendly error messages.
+- Implement the bonus feature: Add a 'switch' button to swap the 'from' and 'to' currencies and recalculate.
+- Consider using a more descriptive naming convention for variables (e.g., instead of `to`, use `targetCurrency`).
+- Separate concerns: The fetch calls and DOM manipulation could be better separated for improved readability and maintainability. Consider creating functions for fetching data and updating the UI.
+Correctness: 90%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week12/day4/daily-challenge/style.css
+suggestions for improvement:
+- The provided code is only CSS and HTML.  It doesn't implement any of the JavaScript functionality required to fetch data using the Fetch API, utilize async/await, or build the currency converter as described in the chapter content.
+- Add JavaScript code to fetch currency data from the specified API endpoints.
+- Implement the currency conversion logic using the fetched data.
+- Create the user interface elements (input fields, buttons, etc.) to interact with the converter.
+- Handle potential errors during API calls.
+- Improve styling for better usability.
+Correctness: 0%
+-----

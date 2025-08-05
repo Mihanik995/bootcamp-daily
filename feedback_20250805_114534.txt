@@ -1,0 +1,18 @@
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week19/day2/book-inventory-selector/src/features/books/bookSelectors.js
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week19/day2/book-inventory-selector/src/features/books/booksSlice.js
+suggestions for improvement:
+- The code is missing the crucial parts of the exercise:  the creation of selectors using `createSelector`, the implementation of a React component to display the book list, and the UI interaction to switch between genres.  It only provides the initial state for the books.
+- The `booksSlice` uses `createSlice` which is fine but doesn't leverage selectors as requested. The exercise specifically asks to use `createSelector` from `@reduxjs/toolkit` for creating selectors to filter books by genre.
+- Add a React component (`BookList`) that uses `useSelector` hook from `react-redux` to access the data from selectors and display the books.  Implement buttons/dropdown for genre selection.
+- Implement selectors `selectBooks`, `selectHorrorBooks`, `selectFantasyBooks`, and `selectScienceFictionBooks` using `createSelector`.
+Correctness: 20%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week19/day2/book-inventory-selector/src/App.jsx
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----

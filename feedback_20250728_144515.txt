@@ -1,0 +1,13 @@
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week17/day6/daily-challenge/src/components/ToDoPoint.jsx
+suggestions for improvement:
+- Add filtering functionality based on completion status as described in the instructions.  This component only handles editing and removal, not filtering.
+- Consider using a more descriptive name for the component, like `TaskItem` or `EditableTaskItem`.
+Correctness: 90%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week17/day6/daily-challenge/src/App.jsx
+suggestions for improvement:
+- The code lacks task editing functionality.  An 'Edit' button and mechanism for updating task text using useRef are missing.
+- While filtering works, the implementation could be improved for readability and maintainability. Consider using a more concise filtering logic (e.g., array filter with a ternary operator).
+- Add error handling and input validation (e.g., prevent adding empty tasks).
+Correctness: 85%
+-----

@@ -1,0 +1,36 @@
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week18/day2/daily-challenge/src/components/ToDoPoint.jsx
+suggestions for improvement:
+- The code only handles marking tasks as complete and removing them.  It doesn't implement adding or editing tasks, which are explicitly required in the Chapter Content/Questions.
+- The component should ideally receive the `day` prop as a formatted date string for better clarity and consistency.
+- Consider adding error handling or loading states, especially if `dispatch` could potentially fail.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week18/day2/daily-challenge/src/features/to-do-list/toDoListSlice.js
+suggestions for improvement:
+- Implement edit functionality: The chapter requires an 'edit' functionality which is missing.  Add an 'edit' reducer and action.
+- Improve error handling: Add error handling for cases like trying to access a non-existent day or modifying a non-existent task.
+- Use more descriptive reducer names:  Names like `addTask`, `completeTask`, and `removeTask` would be more readable than `add`, `markCompleted`, and `remove`.
+- Consider a more flexible day representation: Instead of hardcoding days, consider using a date object for better flexibility and extensibility.
+- Add UI components description: The provided code only contains the Redux store logic.  The chapter also mentions a calendar, task display, and task management components. Those are missing.
+Correctness: 90%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week18/day2/daily-challenge/src/app/store.js
+suggestions for improvement:
+- The provided code only sets up the Redux store.  It's missing crucial components like actions, reducers, and React components to fulfill the chapter's requirements.
+- The `toDoListReducer` is not defined in this snippet.  The functionality of this reducer is crucial for managing tasks by day, a key requirement of the chapter.
+- No calendar/date picker, task display, task management components, or integration with the React components are present.
+- The code lacks any implementation for adding, editing, or deleting tasks.  These are explicit requirements of the chapter.
+- There's no connection to a React front-end, rendering the Redux store's functionality currently unusable.
+- Add error handling and input validation to prevent unexpected behavior. 
+- Implement local storage or a backend connection for persistence.
+Correctness: 20%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week18/day2/daily-challenge/src/App.jsx
+suggestions for improvement:
+- Implement edit and delete functionalities for tasks.  The current code only allows adding tasks.
+- Add a calendar or date picker component as specified in the instructions. The current implementation uses a simple select dropdown.
+- Improve error handling.  What happens if the user submits an empty task? Add input validation.
+- Add more robust testing to cover all aspects of the application, including edge cases and error conditions.
+- Consider using a more descriptive state structure in the Redux store.  While the current approach works, a more structured approach might improve maintainability as the application grows.
+Correctness: 85%
+-----

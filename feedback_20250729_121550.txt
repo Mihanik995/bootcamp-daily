@@ -1,0 +1,28 @@
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week18/day2/daily-challenge/src/app/store.js
+suggestions for improvement:
+- The provided code only sets up the Redux store.  It lacks the crucial components (actions, reducers, React components) necessary to fulfill the chapter's requirements of creating a daily planner application with add, edit, and delete functionalities.
+- The `toDoListReducer` is referenced but not defined, making the code incomplete.  The reducer needs to be implemented to handle adding, editing, and deleting tasks by day.
+- A calendar or date picker component is missing, as are components for task display and management (adding, editing, deleting).
+- The code does not implement connecting the components to the Redux store using `react-redux`'s `connect` function.
+- No validation or error handling is present, and persistence is not considered.
+Correctness: 20%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week18/day2/daily-challenge/src/components/ToDoPoint.jsx
+suggestions for improvement:
+- The code only handles marking tasks as complete and removing them.  It doesn't implement adding or editing tasks, which are explicitly required in the chapter content.
+- The code lacks a date picker component for selecting different days.  The `day` prop is passed in, but the mechanism for selecting the day isn't shown.
+- Error handling (e.g., what happens if `item` or `item.id` is invalid) should be included.
+- The code could benefit from more descriptive component names (e.g., `TaskItem` instead of the anonymous function).
+- Consider using a more semantically appropriate element than `div` with `className='li'` for styling the task item. Perhaps a `<article>` or `<section>` would be better.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week18/day2/daily-challenge/src/features/to-do-list/toDoListSlice.js
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week18/day2/daily-challenge/src/App.jsx
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----

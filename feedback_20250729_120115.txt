@@ -1,0 +1,29 @@
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week18/day2/exercises/src/app/store.js
+suggestions for improvement:
+- The provided code only sets up the Redux store.  It's missing the crucial parts: actions, reducers, and React components. The chapter explicitly asks for these elements.
+- The `toDoListReducer` is assumed to exist in `../features/to-do-list/toDoListSlice.js`.  The code should include the reducer's implementation for a complete evaluation.
+- Add error handling for potential issues during store creation.  For instance, what happens if `toDoListReducer` is not defined correctly?
+- Include type definitions for better readability and maintainability.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week18/day2/exercises/src/components/ToDoPoint.jsx
+suggestions for improvement:
+- The code is missing the functionality to add new todos.  The instructions explicitly state to create components for adding, completing, and removing todos.
+- The code lacks a component to display the list of todos.  While it renders a single todo item, it's not integrated into a larger todo list structure.
+- Error handling (e.g., what happens if `item.id` is missing?) could be improved.  Robust error handling makes the app more stable.
+- Consider adding a visual cue (e.g., strikethrough) to indicate completed todos, beyond just the button.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week18/day2/exercises/src/features/to-do-list/toDoListSlice.js
+suggestions for improvement:
+- The reducer `markCompleted` mutates the state directly, violating Redux's principle of immutability.  It should create a new array instead of modifying the existing one.
+- The name 'counter' for the slice is misleading; it should be renamed to something like 'todoList'.
+- For larger lists, the `find` method in `markCompleted` and the `filter` method in `remove` can have performance implications.  Consider using more efficient methods for larger datasets (e.g., using an object or Map as the underlying data structure to access elements by ID faster).
+- Add error handling for the case where `find` in `markCompleted` returns `undefined` (if an ID doesn't exist).
+Correctness: 80%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week18/day2/exercises/src/App.jsx
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
