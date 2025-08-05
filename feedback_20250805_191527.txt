@@ -1,0 +1,58 @@
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week19/day2/daily-challenge/src/components/CategorySelector.jsx
+suggestions for improvement:
+- Implement `selectTasksByCategory`, `selectCompletedTasks`, and `selectCategoryById` selectors using `createSelector` as specified in the instructions.
+- Create `TaskList` and `CategorySelector` components utilizing `useSelector` and `useCallback` as instructed.
+- Add functionality for task editing and completion, including UI elements.
+- The code only handles adding tasks and categories.  It's missing reducers for editing, deleting, and updating task progress.
+- Consider adding error handling (e.g., for duplicate category names).
+Correctness: 70%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week19/day2/daily-challenge/src/components/TaskList.jsx
+suggestions for improvement:
+- The code is missing the Redux store setup, reducers, actions, and other components mentioned in the instructions (points 1, 2, 4).
+- The `CategorySelector` component is not implemented.
+- The `useCallback` hook is not used for task editing and completion (point 5).
+- The `dispatch` function is missing.  It needs to be imported from 'react-redux' or a similar library.
+- Hardcoding index as the key is not ideal.  Use a unique identifier (e.g., task.id) as the key for list items.
+- Error handling (e.g., for missing tasks or categories) is absent.
+- The conditional rendering `{!currentCategory && `, category: ${task.category}`}` is a bit clunky and could be improved for readability.
+Correctness: 70%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week19/day2/daily-challenge/src/features/categories/categorySlice.js
+suggestions for improvement:
+- The `editCategory` reducer uses a loop and `find` which is inefficient.  Use `immer` to directly update the state immutably.
+- The `deleteCategory` reducer uses `delete` which might not work as expected with objects in an array.  Use `filter` to create a new array without the deleted item.
+- Implement the tasks slice alongside categories as per instructions.
+- Implement selectors (`selectTasksByCategory`, `selectCompletedTasks`, `selectCategoryById`) using `createSelector` as specified.
+- Implement `TaskList` and `CategorySelector` components using `useSelector` and `useCallback`.
+- Add error handling to prevent crashes from unexpected actions or missing data.
+Correctness: 70%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week19/day2/daily-challenge/src/features/tasks/taskSlice.js
+suggestions for improvement:
+- Implement categories management: The code only handles tasks, lacking actions and reducers for categories (add, edit, delete).
+- Use Immer for better immutability:  Directly mutating the state in reducers can lead to unexpected behavior.  Using Immer would improve this.
+- Improve `editTask` reducer: The current implementation iterates through payload keys which is not efficient or readable.  A more concise approach would be to directly update the task object.
+- Add selectors:  The instructions specifically mention creating selectors (`selectTasksByCategory`, `selectCompletedTasks`, `selectCategoryById`).  These are missing.
+- Implement `TaskList` and `CategorySelector` components: The code provides only Redux logic; the UI components are missing.
+- Implement `useCallback` for efficiency: While the code uses Redux, which itself improves performance to some extent, explicitly using `useCallback` as requested isn't present.
+- Add error handling: The reducers lack error handling; for example, `deleteTask` and `markCompleted` could fail silently if the task ID is not found.
+Correctness: 70%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week19/day2/daily-challenge/src/features/selectors.js
+suggestions for improvement:
+- The `selectCategoryById` selector should return a single category object, not an array.  Use `find` instead of `filter`.
+- Add error handling to selectors to gracefully handle cases where tasks or categories are undefined or empty.
+- The performance of `selectTasksByCategory` could be improved by memoizing the result for a given category.  Currently, it re-filters the task list every time the component re-renders, even if the category hasn't changed.
+- Consider adding unit tests to verify the correctness and performance of the selectors.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week19/day2/daily-challenge/src/App.jsx
+suggestions for improvement:
+- The provided code only implements a basic UI structure.  It lacks the core Redux functionality (store, actions, reducers, selectors) specified in the chapter content.  The `CategorySelector` and `TaskList` components are placeholders without the necessary Redux integration.
+- Add Redux store using `createStore` and integrate reducers to handle task and category management. Implement actions for adding, editing, deleting tasks and categories, and updating task progress.
+- Implement selectors using `createSelector` to retrieve tasks by category, count completed tasks, and fetch category details by ID. These selectors should be used within the `TaskList` and `CategorySelector` components via `useSelector`.
+- Implement task editing and completion functionality within `TaskList` using `useCallback` for better performance.
+- Replace the placeholder `CategorySelector` and `TaskList` components with actual functional components that connect to the Redux store and display the data accordingly.
+Correctness: 20%
+-----
