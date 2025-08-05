@@ -1,0 +1,25 @@
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week12/day2/daily-challenge/daily-challenge.js
+suggestions for improvement:
+- Improve error handling to provide more user-friendly feedback instead of just logging to the console.
+- Add input validation to prevent unexpected behavior or errors if the user inputs invalid data.
+- The `generateRandomId` function could be improved for efficiency by using a more robust method of generating unique IDs, especially with a higher volume of GIFs. Consider using UUIDs or timestamps.
+- Enhance the HTML structure for better semantic clarity and accessibility.  For example, use appropriate ARIA attributes for the buttons.
+Correctness: 95%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week12/day2/daily-challenge/index.html
+suggestions for improvement:
+- The JavaScript code is missing, preventing a complete assessment of correctness.  The provided HTML structure is good, but the functionality depends entirely on the missing JS file.
+- Add error handling for cases where the API request fails (e.g., network error, invalid tag).
+- Improve error messages to be more user-friendly (instead of just logging to the console).
+- Consider using a more descriptive variable name than just `tag` (e.g., `gifCategory` or `searchTag`).
+- Add styling to make the page visually appealing (the current CSS is not provided).
+- The `deleteAll` function is not provided; its implementation needs to be included in the `daily-challenge.js` file.
+Correctness: 90%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week12/day2/daily-challenge/style.css
+suggestions for improvement:
+- The provided code only includes HTML and CSS styling.  It lacks the JavaScript functionality required to fetch GIFs from the Giphy API, display them, add delete buttons, and handle delete functionality.  The core functionality described in the chapter content is entirely missing.
+- Add JavaScript code to handle API calls using `fetch` or `async/await`, display GIFs, create and handle delete button clicks for individual GIFs and a 'Delete All' button.
+- Implement error handling using `try...catch` to gracefully handle potential issues with the API request.
+Correctness: 0%
+-----

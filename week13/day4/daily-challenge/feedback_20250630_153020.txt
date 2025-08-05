@@ -1,0 +1,27 @@
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week13/day4/daily-challenge/app.js
+suggestions for improvement:
+- The code only sets up the server and provides a basic API endpoint to fetch the emoji data. It doesn't implement the core game logic (random emoji selection, multiple-choice options, form submission, score tracking, feedback, etc.), which are explicitly required in the chapter content.  It also doesn't handle POST requests for submitting guesses.
+- The `app.get('/emojis', ...)` endpoint directly sends the entire `emojis` array to the client. This is inefficient and may not be suitable for a larger dataset.  Consider sending only the necessary data for a single game round.
+- The `index.ejs` file (not provided) needs to be implemented to create the HTML form for the game. 
+- Add error handling (e.g., try-catch blocks) for robustness. 
+- The leaderboard functionality is missing.
+Correctness: 30%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week13/day4/daily-challenge/package.json
+suggestions for improvement:
+- The provided code is only a `package.json` file. It doesn't contain any actual code for the emoji guessing game.  It defines dependencies (Express and EJS), which are relevant, but the core game logic is missing.
+- Implement the game logic in `app.js` (or a similar file) using Express to create the API endpoints, handle form submissions, and manage the game state.  You need to create the emoji array, random emoji selection, option generation, scoring system, and feedback mechanisms.
+- Implement a frontend (using EJS or another templating engine) to display the emoji and options to the user and handle the submission of their guesses via the Fetch API.
+- Add error handling to gracefully handle cases like incorrect input or server errors.
+- Consider using a database (like MongoDB or SQLite) to store leaderboard data for persistent scores.
+Correctness: 20%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week13/day4/daily-challenge/public/js/script.js
+suggestions for improvement:
+- The code lacks a server-side component (Express API) to handle emoji requests.  The `/emojis` fetch assumes this API exists but isn't provided.
+- Error handling could be improved. While there's a `catch` block, it only logs to the console.  A more user-friendly error message would enhance the user experience.
+- The leaderboard functionality is missing.  The chapter explicitly requires implementing a leaderboard to show top scores.
+- The code uses a `<select>` element instead of providing multiple choice buttons as implied in the instructions. Although functional, the instruction mentions a form with multiple choices, making it less user-friendly.
+- Improve code structure using functions and modules instead of inline code.  This will improve readability and maintainability.
+Correctness: 85%
+-----
