@@ -1,0 +1,11 @@
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week20/day2/exercises/exercises.ts
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week20/day2/exercises/index.html
+suggestions for improvement:
+- The provided code is an HTML file, but the chapter content and exercises are exclusively focused on writing TypeScript code. You need to create a TypeScript file (e.g., `exercises.ts`) where you implement the solutions for each exercise, and then compile it to JavaScript (`exercises.js`). The current HTML merely serves as a basic container.
+- For Exercise 7 (Type Assertions), which specifically instructs to 'cast the element to a specific HTML element type, such as `HTMLInputElement`' and 'set the `value` of an `input` element', the current `<h1>` tag with `id="greeting"` is not an input element. To properly test this exercise, you should add an `<input type="text" id="myInput">` (or similar) to your HTML body and target that element in your TypeScript code for type assertion.
+Correctness: 0%
+-----
