@@ -1,0 +1,20 @@
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week10/day6/exercsies/index.html
+suggestions for improvement:
+- Exercise 1 and 2 should specify the `action` attribute of the `<form>` tag.  Currently, it submits to the same page, which is technically correct based on the instructions but could be improved for clarity and to demonstrate a more complete understanding of form submissions.
+- Add input validation to prevent script injection vulnerabilities (Exercise 1 & 2).  Sanitize user inputs before processing on the server-side (although not explicitly mentioned in the instructions, it's good practice).
+- For Exercise 3, the code is missing. The JSON conversion and manipulation should be demonstrated in a separate JavaScript file (`script.js`) and called appropriately within the HTML.
+Correctness: 90%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week10/day6/exercsies/script.js
+suggestions for improvement:
+- The code could include a more descriptive variable name instead of `gameJSON` (e.g., `marioGameJson`).
+- Adding comments to explain the purpose of `JSON.stringify` and the `null, 2` arguments would enhance readability.
+Correctness: 100%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week10/day6/exercsies/style.css
+suggestions for improvement:
+- The provided code is only CSS and doesn't implement any of the exercises.  It provides basic styling for a form but lacks the HTML structure and JavaScript required to fulfill the exercise requirements.
+- Exercise 1 and 2 require creating HTML forms with GET and POST methods respectively. This code does not include any HTML.
+- Exercise 3 requires JSON manipulation in Javascript.  This code provides no Javascript.
+Correctness: 0%
+-----

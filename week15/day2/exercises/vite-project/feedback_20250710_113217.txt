@@ -1,0 +1,63 @@
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week15/day2/exercises/vite-project/eslint.config.js
+suggestions for improvement:
+- This code is an ESLint configuration file. It does not create a React app, use JSX, or implement any of the styling exercises described in the chapter content.
+- The ESLint configuration is well-structured and uses common plugins for React development. However, it's irrelevant to the exercises.
+- Remove this configuration file or place it in a separate context to avoid confusion.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week15/day2/exercises/vite-project/index.html
+suggestions for improvement:
+- The provided code is only an HTML file for a React application.  It doesn't contain any of the React components or logic necessary to address any of the exercises.
+- The exercises require the creation of React components (`App.js`, `UserFavoriteAnimals.js`, `Exercise3.js`),  JSX usage, styling with inline styles and CSS files, and handling of objects and arrays. None of this is present in the provided HTML file.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week15/day2/exercises/vite-project/package.json
+suggestions for improvement:
+- This is a `package.json` file, not React code. It only sets up the project dependencies and scripts.  It doesn't address any of the exercises (creating React components, using JSX, styling).
+- Add the actual React code that implements the exercises described in the chapter content. This `package.json` only provides the framework.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week15/day2/exercises/vite-project/src/App.jsx
+suggestions for improvement:
+- The `UserFavoriteAnimals` component should be a class component as instructed, not a functional component.  The current implementation likely uses a functional component with props, which is acceptable modern React practice but deviates from the instructions.
+- Add error handling for the case where `user.favAnimals` might be undefined or null in `App.js` to prevent runtime errors.
+- In `Exercise3`, separate CSS styling using an external stylesheet from inline styles for better maintainability. While the instructions are vague, it would improve the code's structure to not hardcode styling directly in the JSX.
+Correctness: 90%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week15/day2/exercises/vite-project/src/components/Exercise.css
+suggestions for improvement:
+- The provided code snippet is a CSS style for a paragraph element.  It's well-formatted and adheres to CSS best practices. No improvements are needed for this specific snippet,  but  the context of its use within a larger React application would need to be reviewed for a complete assessment.
+Correctness: 100%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week15/day2/exercises/vite-project/src/components/Exercise3.jsx
+suggestions for improvement:
+- The `<li>` element should be within a `<ul>` or `<ol>` element for semantic correctness.
+- The image source (`src/assets/react.svg`) is relative and might not work if the file structure is different.  Consider using a more robust method for image sourcing (e.g., public URL or module import).
+- Add alt text to all elements that require it for better accessibility.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week15/day2/exercises/vite-project/src/components/UserFavoriteAnimals.jsx
+suggestions for improvement:
+- The code is excellent and directly addresses Exercise 2.  Consider using a more descriptive key than just the index.  For example, you could use the animal itself as a key (if unique) or a generated UUID for better uniqueness and readability.
+- Adding prop-type validation would enhance the robustness of the component, preventing unexpected errors if the `props.animals` is not an array.
+Correctness: 100%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week15/day2/exercises/vite-project/src/index.css
+suggestions for improvement:
+- The provided CSS code does not address any of the exercises outlined in the chapter content.  It's a basic CSS stylesheet for a webpage, but it lacks any React-specific code or implementation related to JSX, styling in React, or the exercises involving components like `UserFavoriteAnimals` or `Exercise`.
+- To achieve a higher correctness score, you need to provide React code (using JSX) that directly implements the instructions given in Exercises 1, 2, and 3.  This would involve creating components, using props, and applying CSS styling as specified in the instructions.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week15/day2/exercises/vite-project/src/main.jsx
+suggestions for improvement:
+- The provided code is a basic React app setup. It doesn't implement any of the exercises described in the chapter content.  It only renders the App component, which is empty without the exercises' code inside.
+- Add the code for exercises 1, 2, and 3 within the `App.js` and other required files (`UserFavoriteAnimals.js`, `Exercise3.js`, `Exercise.css`) to fulfill the chapter's requirements.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week15/day2/exercises/vite-project/vite.config.js
+suggestions for improvement:
+- This code is a Vite configuration file for a React project. It does not contain any of the React code required to complete the exercises described in the chapter content.
+- The exercises require creating React components, using JSX, styling components using inline styles and CSS files, and working with arrays and objects to render data.  This Vite config does none of that.
+- Add the necessary React components and logic to solve the exercises.
+Correctness: 0%
+-----

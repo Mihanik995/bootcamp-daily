@@ -1,0 +1,16 @@
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week19/day2/book-inventory-selector/src/components/BookList.jsx
+suggestions for improvement:
+- The conditional logic for selecting the correct selector can be improved for readability and maintainability.  Consider using a switch statement or an object lookup for better organization.
+- Add error handling for the case where `category` is invalid or `books` is null or undefined.  Currently, it just renders nothing.  A more informative message would improve user experience.
+- The component is missing props validation. Add proptypes to ensure that the 'category' prop is always a string.
+Correctness: 85%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week19/day2/book-inventory-selector/src/features/books/bookSelectors.js
+suggestions for improvement:
+- The code is missing the Redux store setup, reducers, and React components as described in the exercise instructions.  It only provides the selectors.
+- Error handling (e.g., handling the case where `state.books` is undefined or null) should be added to the selectors for robustness.
+- The exercise requires a UI with buttons or a dropdown to switch between genres; this is missing from the provided code.
+- The selectors should handle the case where no books of a particular genre exist, to avoid errors or unexpected behavior.
+- Consider using a more descriptive variable name instead of 'books' in the selectors,  for instance `selectAllBooks`, `selectBooksByGenre`, etc.
+Correctness: 80%
+-----

@@ -1,0 +1,20 @@
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week19/day2/book-inventory-selector/src/components/BookList.jsx
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week19/day2/book-inventory-selector/src/features/books/bookSelectors.js
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week19/day2/book-inventory-selector/src/features/books/booksSlice.js
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week19/day2/book-inventory-selector/src/App.jsx
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
