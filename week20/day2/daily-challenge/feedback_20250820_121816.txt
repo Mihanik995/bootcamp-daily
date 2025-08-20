@@ -1,0 +1,6 @@
+URL: URL: https://github.com/Mihanik995/bootcamp-daily/blob/main/week20/day2/daily-challenge/daily-challenge.ts
+suggestions for improvement:
+- Align parameter names (`variable`, `types`) with the exact names specified in the exercise signature (`value`, `allowedTypes`) for strict consistency.
+- While the code correctly uses `typeof` as per the prompt's implied usage, be aware that `typeof` returns 'object' for arrays, null, and other specific object types. If more granular checks for these (e.g., distinguishing arrays from plain objects) were needed, more advanced type guards (like `Array.isArray()` or `instanceof`) would be necessary. This is an educational point about `typeof`'s limitations rather than a direct flaw in the code's current implementation, which correctly handles string comparisons.
+Correctness: 95%
+-----
